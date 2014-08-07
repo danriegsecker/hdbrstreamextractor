@@ -138,7 +138,6 @@ namespace eac3toGUI
             this.FolderOutputTextBox = new System.Windows.Forms.TextBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.FeatureGroupBox = new System.Windows.Forms.GroupBox();
-            this.StreamGroupBox = new System.Windows.Forms.GroupBox();
             this.FeatureDataGridView = new eac3toGUI.CustomDataGridView();
             this.FeatureNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FeatureNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -146,14 +145,15 @@ namespace eac3toGUI
             this.FeatureFileDataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.FeatureDurationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FeatureBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.StreamGroupBox = new System.Windows.Forms.GroupBox();
             this.StreamDataGridView = new eac3toGUI.CustomDataGridView();
-            this.StreamsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.StreamExtractCheckBox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.StreamNumberTextBox = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StreamTypeTextBox = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StreamDescriptionTextBox = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StreamExtractAsComboBox = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.StreamAddOptionsTextBox = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StreamsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.StatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -166,9 +166,9 @@ namespace eac3toGUI
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.FeatureGroupBox.SuspendLayout();
-            this.StreamGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FeatureDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FeatureBindingSource)).BeginInit();
+            this.StreamGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StreamDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StreamsBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -462,17 +462,6 @@ namespace eac3toGUI
             this.FeatureGroupBox.TabIndex = 15;
             this.FeatureGroupBox.TabStop = false;
             // 
-            // StreamGroupBox
-            // 
-            this.StreamGroupBox.Controls.Add(this.StreamDataGridView);
-            this.StreamGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StreamGroupBox.Location = new System.Drawing.Point(0, 0);
-            this.StreamGroupBox.Name = "StreamGroupBox";
-            this.StreamGroupBox.Size = new System.Drawing.Size(566, 185);
-            this.StreamGroupBox.TabIndex = 16;
-            this.StreamGroupBox.TabStop = false;
-            this.StreamGroupBox.Text = "Stream(s)";
-            // 
             // FeatureDataGridView
             // 
             this.FeatureDataGridView.AllowUserToAddRows = false;
@@ -576,6 +565,17 @@ namespace eac3toGUI
             this.FeatureBindingSource.AllowNew = false;
             this.FeatureBindingSource.DataSource = typeof(eac3to.Feature);
             // 
+            // StreamGroupBox
+            // 
+            this.StreamGroupBox.Controls.Add(this.StreamDataGridView);
+            this.StreamGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StreamGroupBox.Location = new System.Drawing.Point(0, 0);
+            this.StreamGroupBox.Name = "StreamGroupBox";
+            this.StreamGroupBox.Size = new System.Drawing.Size(566, 185);
+            this.StreamGroupBox.TabIndex = 16;
+            this.StreamGroupBox.TabStop = false;
+            this.StreamGroupBox.Text = "Stream(s)";
+            // 
             // StreamDataGridView
             // 
             this.StreamDataGridView.AllowUserToAddRows = false;
@@ -614,11 +614,6 @@ namespace eac3toGUI
             this.StreamDataGridView.Size = new System.Drawing.Size(554, 160);
             this.StreamDataGridView.TabIndex = 7;
             this.StreamDataGridView.DataSourceChanged += new System.EventHandler(this.StreamDataGridView_DataSourceChanged);
-            // 
-            // StreamsBindingSource
-            // 
-            this.StreamsBindingSource.AllowNew = false;
-            this.StreamsBindingSource.DataSource = typeof(eac3to.Stream);
             // 
             // StreamExtractCheckBox
             // 
@@ -690,6 +685,11 @@ namespace eac3toGUI
             this.StreamAddOptionsTextBox.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.StreamAddOptionsTextBox.ToolTipText = "Stream extract additional options";
             // 
+            // StreamsBindingSource
+            // 
+            this.StreamsBindingSource.AllowNew = false;
+            this.StreamsBindingSource.DataSource = typeof(eac3to.Stream);
+            // 
             // HdBrStreamExtractor
             // 
             this.AcceptButton = this.ExtractButton;
@@ -727,9 +727,9 @@ namespace eac3toGUI
             this.splitContainer2.ResumeLayout(false);
             this.FeatureGroupBox.ResumeLayout(false);
             this.FeatureGroupBox.PerformLayout();
-            this.StreamGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FeatureDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FeatureBindingSource)).EndInit();
+            this.StreamGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.StreamDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StreamsBindingSource)).EndInit();
             this.ResumeLayout(false);
